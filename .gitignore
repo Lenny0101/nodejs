@@ -9,6 +9,6 @@ logs/
 yarn.lock
 .env
 .eslintrc.json
-uploads/images/*
+uploads/*
 data/*
 !./uploads/images/.gitkeep

@@ -6,8 +6,10 @@ import mongoose from 'mongoose';
 import './utils/dotenv';
 import Logger from './utils/logger';
 import defaultErrorHandler from './middlewares/defaultErrorHandler';
+
 import index from './routes/index';
 import user from './routes/user';
+import media from './routes/media';
 
 const logger = Logger('server.js');
 
@@ -43,6 +45,7 @@ app.use(
 
 app.use(`/api/v${process.env.API_VERSION}`, index);
 app.use(`/api/v${process.env.API_VERSION}`, user);
+app.use(`/api/v${process.env.API_VERSION}`, media);
 
 app.use(defaultErrorHandler);
 
